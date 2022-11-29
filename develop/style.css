@@ -76,3 +76,17 @@ border-radius: 20px;
 
 }
 
+.weather.loading { 
+visibility: hidden;
+max-height: 20px;
+position: relative;
+}
+
+.weather.laoding:after {
+  visibility: visible;
+  content: "Loading...";
+  color:  white;
+  position: absolute;
+  top: 0;
+}
+
