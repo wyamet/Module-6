@@ -1,3 +1,13 @@
+function find(c){
+    for (var i=0; i<sCity.length; i++){
+        if(c.toUpperCase()===sCity[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
+
+
 let weather = {
     apiKey: "1cf0d4dd74d66ec9213b19523fa48a65",
     fetchWeather: function (city) {
@@ -34,7 +44,7 @@ document.querySelector(".searchBtn").addEventListener("click", function() {
 weather.search();
 
 });
-// allows uer to search with the enter button
+// allows user to search with the enter button
 document.querySelector(".search-bar").addEventListener("keyup", function(event) { 
     if (event.key == "Enter") {
         weather.search();
@@ -42,6 +52,9 @@ document.querySelector(".search-bar").addEventListener("keyup", function(event) 
 })
 
 weather.fetchWeather("Denver");
+
+
+
 
 // let  apikey = "1cf0d4dd74d66ec9213b19523fa48a65";
 // function fetchWeather () {
